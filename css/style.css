@@ -7,4 +7,124 @@ html {
 
 body {
   font-family: "Rubik", sans-serif;
+  display: flex;
+  flex-flow: column nowrap;
+  /* justify-content: space-between; */
+  align-items: center;
+  min-height: 100vh;
+  background: url(../images/pattern-bg.png) no-repeat;
+  background-attachment: fixed;
+  background-size: contain;
 }
+
+.top-h1 {
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 30px;
+  letter-spacing: -0.285714px;
+  color: #ffffff;
+  margin-top: 33px;
+  text-align: center;
+}
+
+.search-box {
+  margin-top: 31px;
+  text-align: center;
+  width: 553px;
+  height: 58px;
+  background: #ffffff;
+  box-shadow: 0px 50px 50px -25px rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+}
+
+.inp {
+  border: none;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 21px;
+  color: #2c2c2c;
+  mix-blend-mode: normal;
+  border-radius: 15px 0 0 15px;
+  width: calc(100% - 62px);
+  height: 58px;
+  position: relative;
+  top: -23px;
+  right: -4px;
+  padding-left: 24px;
+  cursor: pointer;
+}
+
+.inp:focus {
+  outline: none;
+}
+
+.input-btn {
+  height: 58px;
+  width: 58px;
+  background: #000000 url(../images/icon-arrow.svg) no-repeat center;
+  border-radius: 0px 15px 15px 0px;
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+.input-btn:hover {
+  background-color: #3f3f3f;
+}
+
+.show-box {
+  width: 1110px;
+  height: 161px;
+  background: #ffffff;
+  box-shadow: 0px 50px 50px -25px rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+  margin-top: 48px;
+  z-index: 1;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: start;
+  align-items: center;
+}
+
+.info{
+  width: calc(1110px / 4);
+  height: 100% !important;
+  padding-left: 32px;
+  
+}
+
+.vr-line{
+  height: 75px;
+  border-right: 1px solid hsla(0, 0%, 0%, 1);
+  opacity: 0.15;
+}
+
+.info-name{
+  font-weight: bold;
+font-size: 12px;
+line-height: 14px;
+letter-spacing: 1.75px;
+text-transform: uppercase;
+color: #2C2C2C;
+mix-blend-mode: normal;
+opacity: 0.5;
+margin:40px 0 13px 0;
+}
+
+.info-val{
+  font-weight: 500;
+font-size: 26px;
+line-height: 30px;
+letter-spacing: -0.232143px;
+color: #2C2C2C;
+}
+
+#mapid {
+  height: 640px;
+  width: 100%;
+  background-color: cyan;
+  position: relative;
+  top: -100px;
+}
+
+
+

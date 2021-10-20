@@ -22,15 +22,39 @@
 
 <body>
 
+  <h1 class="top-h1">IP Address Tracker</h1>
+
+  <form class="search-box">
+    <input type="text" class="inp" placeholder="Search for any IP address or domain">
+    <input type="button" class="input-btn">
+  </form>
+
+  <div class="show-box">
+
+    <div class="info">
+      <p class="info-name">IP Address</p>
+      <p class="info-val" id="ip">88888888</p>
+    </div>
+    <span class="vr-line"></span>
+    <div class="info">
+      <p class="info-name">Location</p>
+      <p class="info-val" id="location">88888888</p>
+    </div>
+    <span class="vr-line"></span>
+    <div class="info">
+      <p class="info-name">Timezone</p>
+      <p class="info-val" id="time"><span>UTC - </span> 88888888</p>
+    </div>
+    <span class="vr-line"></span>
+    <div class="info">
+      <p class="info-name">ISP</p>
+      <p class="info-val" id="isp">88888888</p>
+    </div>
+
+  </div>
 
 
-
-
-
-
-
-
-
+  <div id="mapid"></div>
 
   <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
     integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
