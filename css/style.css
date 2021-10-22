@@ -132,10 +132,10 @@ body {
 }
 
 #map {
-  position: relative;
+  position: absolute;
   min-height: 640px;
   width: 100%;
-  top: -118px;
+  top: 280px;
   z-index: 0;
 }
 
@@ -147,6 +147,7 @@ body {
 }
 
 .attribution {
+  margin-top: 570px;
   font-size: 11px;
   text-align: center;
 }
@@ -156,7 +157,7 @@ body {
 
 /*****************media query****************/
 
-@media (max-width: 1120px) {
+@media (max-width: 1200px) {
   body {
     min-height: auto;
   }
@@ -176,7 +177,7 @@ body {
   #getIp {
     font-size: 15px;
     line-height: 18px;
-    padding-left: 14px;
+    padding-left: 12px;
   }
 
   .error {
@@ -202,7 +203,7 @@ body {
     padding: 0;
     display: flex;
     flex-flow: column;
-    margin-top: 7px;
+    margin-top: 8px;
     justify-content: space-around;
   }
 
@@ -225,12 +226,12 @@ body {
     letter-spacing: -0.178571px;
   }
 
-  #map {
-    top: -220px;
-  }
-
   .leaflet-touch .leaflet-bar {
     position: relative;
     top: 550px;
+  }
+
+  .attribution {
+    margin-top: 445px;
   }
 }
