@@ -1,27 +1,3 @@
-// var mymap = L.map('mapid').setView([51.505, -0.09], 13);
-
-// L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
-//   attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
-//   maxZoom: 18,
-//   id: 'mapbox/streets-v11',
-//   tileSize: 512,
-//   zoomOffset: -1,
-//   accessToken: 'your.mapbox.access.token'
-// }).addTo(mymap);
-
-// var marker = L.marker([51.5, -0.09]).addTo(mymap);
-
-// let id = document.getElementById("ip");
-// let locaction = document.getElementById("location");
-// let time = document.getElementById("time");
-// let isp = document.getElementById("isp");
-
-// let getId = document.getElementById("getId");
-// let btn = document.getElementById("btn");
-
-
-
-
 const COMMON_ENDPOINT = 'https://geo.ipify.org/api/v2/country,city?apiKey=at_SmSbOtgWwErIMnQPlRBIpxTh4OWX3&ipAddress=8.8.8.8';
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -48,7 +24,11 @@ function handleSubmit(e) {
 		setUpPage('domain', input.value);
 	}
 	else {
-		alert('Please enter a domain name or an ip address.');
+		let errorTxt = document.querySelector('.error');
+
+		errorTxt.style.visibility = 'visible';
+
+		setTimeout(() => { errorTxt.style.visibility = 'hidden' }, 2500);
 	}
 }
 
@@ -94,7 +74,6 @@ function displayUserInfo(data) {
 	let time = document.getElementById("time");
 	let isp = document.getElementById("isp");
 
-
 	ip.innerText = data.ip;
 	Location.innerText = `${data.location.city}, ${data.location.country}`;
 	time.innerText = "UTC " + data.location.timezone;
@@ -105,27 +84,24 @@ let map, marker;
 
 function setMap(lat, lng) {
 	/* reset map when it's to be refreshed for the queried ipAddress/domain */
-//  if (map) {
-// 	 	map.remove();
-// 	 	map = undefined;
-// 	 	document.getElementById('map').innerHTML = '';
-// 	}
+	if (map) {
+		map.remove();
+		map = undefined;
+		document.getElementById('map').innerHTML = '';
+	}
 
-	map = L.map('map').setView([lat, lng], 1);
+	map = L.map('map').setView([lat, lng], 13);
 
 	L.tileLayer('https://api.maptiler.com/maps/streets/{z}/{x}/{y}.png?key=noyxLecga2786hVyQyaF', {
-    attribution: '<a href="https://www.maptiler.com/copyright/" target="_blank">&copy; MapTiler</a> <a href="https://www.openstreetmap.org/copyright" target="_blank">&copy; OpenStreetMap contributors</a>',
-}).addTo(map);
-	// const tileAttribution =
-	// 	`<a href="https://www.maptiler.com/copyright/" target="_blank">&copy; MapTiler</a> <a href="https://www.openstreetmap.org/copyright" target="_blank">&copy; OpenStreetMap contributors</a>`;
-
-	// L.tileLayer('https://api.maptiler.com/maps/streets/{z}/{x}/{y}.png?key=noyxLecga2786hVyQyaF', {
-	// 	attribution: tileAttribution
-	// }).addTo(map);
+		attribution: '<a href="https://www.maptiler.com/copyright/" target="_blank">&copy; MapTiler</a> <a href="https://www.openstreetmap.org/copyright" target="_blank">&copy; OpenStreetMap contributors</a>',
+		maxZoom: 18,
+	}).addTo(map);
 
 
 	let markerIcon = L.icon({
 		iconUrl: './images/icon-location.svg',
+		iconSize: [46, 56],
+		iconAnchor: [23, 0],
 	})
 
 	marker = L.marker([lat, lng], { icon: markerIcon }).addTo(map);
