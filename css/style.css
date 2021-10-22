@@ -179,6 +179,14 @@ body {
     padding-left: 14px;
   }
 
+  .error {
+    min-width: 300px;
+    left: -10PX;
+    font-size: 12px;
+    background-position: 285PX;
+    background-size: 11px;
+  }
+
   .show-box {
     height: 294px;
     width: 327px;
@@ -218,7 +226,7 @@ body {
   }
 
   #map {
-    top: -200px;
+    top: -220px;
   }
 
   .leaflet-touch .leaflet-bar {
