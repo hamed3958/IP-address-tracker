@@ -16,8 +16,6 @@
     integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
     crossorigin="" />
 
-
-
   <title>IP Address Tracker</title>
 </head>
 
@@ -26,7 +24,7 @@
   <h1 class="top-h1">IP Address Tracker</h1>
 
   <form class="search-box">
-    <input type="text" id="getIp" placeholder="Search for any IP address or domain">
+    <input type="text" id="getIp" placeholder="Search for any IP address or domain" autocomplete="off" required>
     <input type="submit" id="btn" value="">
   </form>
   <div class="error">
@@ -56,7 +54,6 @@
     </div>
 
   </div>
-
 
   <div id="map">
     <h1 class="loading-text">Loading...</h1>
