@@ -1,15 +1,14 @@
-# IP address tracker solution
+# IP address tracker
 
 [IP address tracker challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/ip-address-tracker-I8-0yYAH0).
 
 ### The challenge
 
 The challenge is to build out this IP Address Tracker app.
-To get the IP Address locations, used the [IP Geolocation API by IPify](https://geo.ipify.org/).
-To generate the map, used [LeafletJS](https://leafletjs.com/).
+- To get the IP Address locations, used the [IP Geolocation API by IPify](https://geo.ipify.org/).
+- To generate the map, used [LeafletJS](https://leafletjs.com/).
 
 Users could be able to:
-
 - View the optimal layout for each page depending on their device's screen size
 - See hover states for all interactive elements on the page
 - See their own IP address on the map on the initial page load
@@ -21,13 +20,11 @@ Users could be able to:
 
 ### Links
 
-- Live Site URL: [IP address tracker](https://your-live-site-url.com)
+- Live Site URL: [IP address tracker](https://hamed3958.github.io/IP-address-tracker/)
 
 ### Built with
-
 - HTML5
 - CSS
-- Flexbox
 - JavaScript
 
 ### What I learned
