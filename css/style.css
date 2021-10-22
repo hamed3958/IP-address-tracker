@@ -37,7 +37,7 @@ body {
   border-radius: 15px;
 }
 
-#getIp{
+#getIp {
   border: none;
   font-weight: normal;
   font-size: 18px;
@@ -71,12 +71,19 @@ body {
   background-color: #3f3f3f;
 }
 
-.error{
-  width: 550px;
+.error {
+  min-width: 450px;
+  height: auto;
+  border-radius: 5px;
+  background: #ffd2d2 url(../images/incorrect_icon.png) no-repeat 430px center;
+  background-size: 15px;
   text-align: left;
-  color: #D8000C;
-  padding-top: 10px;
+  color: #d8000c;
+  margin-top: 10px;
+  padding-left: 10px;
   visibility: hidden;
+  position: relative;
+  left: -50px;
 }
 
 .show-box {
@@ -93,45 +100,43 @@ body {
   align-items: center;
 }
 
-.info{
+.info {
   width: calc(1110px / 4);
   height: 100% !important;
   padding-left: 32px;
-  
 }
 
-.vr-line{
+.vr-line {
   height: 75px;
   border-right: 1px solid hsla(0, 0%, 0%, 1);
   opacity: 0.15;
 }
 
-.info-name{
+.info-name {
   font-weight: bold;
-font-size: 12px;
-line-height: 14px;
-letter-spacing: 1.75px;
-text-transform: uppercase;
-color: #2C2C2C;
-mix-blend-mode: normal;
-opacity: 0.5;
-margin:40px 0 13px 0;
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 1.75px;
+  text-transform: uppercase;
+  color: #2c2c2c;
+  mix-blend-mode: normal;
+  opacity: 0.5;
+  margin: 40px 0 13px 0;
 }
 
-.info-val{
+.info-val {
   font-weight: 500;
-font-size: 26px;
-line-height: 30px;
-letter-spacing: -0.232143px;
-color: #2C2C2C;
+  font-size: 26px;
+  line-height: 30px;
+  letter-spacing: -0.232143px;
+  color: #2c2c2c;
 }
 
-.utc{
+.utc {
   margin-right: 4px;
 }
 
 #map {
- 
   position: relative;
   min-height: 640px;
   width: 100%;
@@ -145,4 +150,3 @@ color: #2C2C2C;
   left: 50%;
   transform: translate(-50%);
 }
-

@@ -1,4 +1,4 @@
-const COMMON_ENDPOINT = 'https://geo.ipify.org/api/v2/country,city?apiKey=at_SmSbOtgWwErIMnQPlRBIpxTh4OWX3&ipAddress=8.8.8.8';
+const COMMON_ENDPOINT = 'https://geo.ipify.org/api/v2/country,city?apiKey=at_SmSbOtgWwErIMnQPlRBIpxTh4OWX3&ipAddress=185.88.153.10';
 
 document.addEventListener('DOMContentLoaded', () => {
 	setUpPage();
@@ -24,14 +24,9 @@ function handleSubmit(e) {
 		setUpPage('domain', input.value);
 	}
 	else {
-		let errorTxt = document.querySelector('.error');
-
-		errorTxt.style.visibility = 'visible';
-
-		setTimeout(() => { errorTxt.style.visibility = 'hidden' }, 2500);
+		errorHandle("Please enter a domain name or an ip address ")
 	}
 }
-
 
 async function fetchData(queryType, queryValue) {
 
@@ -45,8 +40,7 @@ async function fetchData(queryType, queryValue) {
 			.then(data => data)
 
 			.catch(err => {
-				console.error(err);
-				alert('Something went wrong. Please check the console for more info.');
+				errorHandle(err.message);
 			});
 }
 
@@ -57,7 +51,21 @@ async function checkResponse(res) {
 	/* throw the error */
 	const err = await res.json();
 	throw new Error(err.messages);
-};
+}
+
+function errorHandle(txt) {
+	let errorTxt = document.querySelector('.error');
+
+	errorTxt.innerHTML = txt;
+
+	errorTxt.style.visibility = 'visible';
+
+	setTimeout(() => {
+		errorTxt.style.visibility = 'hidden';
+		errorTxt.innerHTML = "";
+	}, 2500);
+}
+
 
 async function setUpPage(queryType, queryValue) {
 	const data = await fetchData(queryType, queryValue);
