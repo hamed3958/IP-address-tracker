@@ -75,15 +75,13 @@ async function setUpPage(queryType, queryValue) {
 }
 
 function displayUserInfo(data) {
-	// const [ IP, Location, TimeZone, ISP ] = document.getElementsByClassName('data-value');
-
 	let ip = document.getElementById("ip");
 	let Location = document.getElementById("location");
 	let time = document.getElementById("time");
 	let isp = document.getElementById("isp");
 
 	ip.innerText = data.ip;
-	Location.innerText = `${data.location.city}, ${data.location.country}`;
+	Location.innerText = `${data.location.city}, ${data.location.country} ${data.location.postalCode}`;
 	time.innerText = "UTC " + data.location.timezone;
 	isp.innerText = data.isp;
 }
