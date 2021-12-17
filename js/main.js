@@ -63,7 +63,7 @@ function errorHandle(txt) {
 	setTimeout(() => {
 		errorTxt.style.visibility = 'hidden';
 		errorTxt.innerHTML = "";
-	}, 2500);
+	}, 3500);
 }
 
 
